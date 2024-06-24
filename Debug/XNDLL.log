@@ -1,0 +1,27 @@
+﻿  dllmain.cpp
+  FanucMachineTool.cpp
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(9): warning C4273: “FanucMachineTool::FanucMachineTool”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(8): note: 参见“{ctor}”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(13): warning C4273: “FanucMachineTool::~FanucMachineTool”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(9): note: 参见“{dtor}”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(17): warning C4273: “FanucMachineTool::setConfig”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(10): note: 参见“setConfig”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(25): warning C4273: “FanucMachineTool::Connect”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(11): note: 参见“Connect”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(41): warning C4273: “FanucMachineTool::Disconnect”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(12): note: 参见“Disconnect”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(54): warning C4273: “FanucMachineTool::getSpindleLoad”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(15): note: 参见“getSpindleLoad”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(78): warning C4273: “FanucMachineTool::getSpindleSpeed”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(16): note: 参见“getSpindleSpeed”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(92): warning C4273: “FanucMachineTool::getAxisFeed”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(19): note: 参见“getAxisFeed”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(106): warning C4273: “FanucMachineTool::getAxisFeedrate”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(20): note: 参见“getAxisFeedrate”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(125): warning C4273: “FanucMachineTool::getToolNum”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(23): note: 参见“getToolNum”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(141): warning C4273: “FanucMachineTool::getProgLineNum”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(26): note: 参见“getProgLineNum”的前一个定义
+  pch.cpp
+    正在创建库 D:\DLUT\XN_Communication\XNDLL\Debug\XNDLL.lib 和对象 D:\DLUT\XN_Communication\XNDLL\Debug\XNDLL.exp
+  XNDLL.vcxproj -> D:\DLUT\XN_Communication\XNDLL\Debug\XNDLL.dll
