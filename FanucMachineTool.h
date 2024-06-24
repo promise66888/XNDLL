@@ -18,6 +18,7 @@ public:
 	//进给轴函数
 	short getAxisFeed(MachineInfo* info);//进给速度
 	short getAxisFeedrate(MachineInfo* info);//进给倍率
+	short getPosition(MachineInfo* info);
 
 	//刀具函数
 	short getToolNum(MachineInfo* info);//刀具号

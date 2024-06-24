@@ -29,6 +29,8 @@ struct AxisInfo  //进给轴信息
 	short state;
 	double axis_actfeed = -99;//进给轴速度
 	double axis_feedrate = -99;//进给倍率
+	double absolute_position[6] = { -99,-99,-99,-99,-99,-99 };//绝对坐标
+	double relative_position[6] = { -99,-99,-99,-99,-99,-99 };//相对坐标
 	string lastTime = "-1";
 };
 

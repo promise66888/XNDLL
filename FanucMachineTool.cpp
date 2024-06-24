@@ -2,6 +2,7 @@
 #include "FanucMachineTool.h"
 #include "pch.h"
 #include<iostream>
+#include<cmath>
 
 using namespace std;
 
@@ -39,6 +40,7 @@ short FanucMachineTool::Connect(MachineInfo * info)
 
 short FanucMachineTool::Disconnect(MachineInfo * info)
 {
+	cout << "DLL中handle:" << info->connectinfo.FlibHndl;
 	info->connectinfo.flag = 0;
 	short ret = cnc_freelibhndl(info->connectinfo.FlibHndl);
 	if (info->connectinfo.state == 0) {
@@ -121,6 +123,24 @@ short FanucMachineTool::getAxisFeedrate(MachineInfo * info)
 	return ret;
 }
 
+short FanucMachineTool::getPosition(MachineInfo * info)
+{
+	ODBPOS position[MAX_AXIS];
+	short num = MAX_AXIS;
+	short ret = cnc_rdposition(info->connectinfo.FlibHndl, -1, &num, position);
+	if (ret == EW_OK)
+	{
+		for (int i = 0; i < num; i++) {
+			info->axisinfo.absolute_position[i] = position[i].abs.data * pow(10, -position[i].abs.dec);
+			info->axisinfo.relative_position[i] = position[i].rel.data * pow(10, -position[i].rel.dec);
+		}
+	}
+	else {
+		cout << "fail to read Position with code:" << ret << endl;
+	}
+	return ret;
+}
+
 short FanucMachineTool::getToolNum(MachineInfo * info)
 {
 	ODBM macro;
@@ -140,16 +160,26 @@ short FanucMachineTool::getToolNum(MachineInfo * info)
 short FanucMachineTool::getProgLineNum(MachineInfo * info)
 {
 	ODBPRO dbpro;
+	ODBSEQ buf;
 	short ret = cnc_rdprgnum(info->connectinfo.FlibHndl, &dbpro);
-	if (ret == EW_OK)
+	short ret2 = cnc_rdseqnum(info->connectinfo.FlibHndl, &buf);
+	if (ret == EW_OK && ret2 == EW_OK)
 	{
 		info->ncinfo.ProNum = dbpro.mdata;//主程序号
-		info->ncinfo.ProLineNum = dbpro.data;//当前运行程序号（子程序号）
+		info->ncinfo.ProLineNum = buf.data;//当前运行程序号（子程序号）
 		return ret;
 	}
 	else
 	{
-		cout << "fail to read ProLineNum with code:" << ret << endl;
-		return ret;
+		if (ret != 0)
+		{
+			cout << "fail to read ProNum with code:" << ret << endl;
+			return ret;
+		}
+		if (ret2 != 0)
+		{
+			cout << "fail to read ProLineNum with code:" << ret2 << endl;
+			return ret2;
+		}
 	}
 }
