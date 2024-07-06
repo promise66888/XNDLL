@@ -40,6 +40,7 @@ short FanucMachineTool::Connect(MachineInfo * info)
 
 short FanucMachineTool::Disconnect(MachineInfo * info)
 {
+	cout << "DLLÖÐhandle:" << info->connectinfo.FlibHndl;
 	info->connectinfo.flag = 0;
 	short ret = cnc_freelibhndl(info->connectinfo.FlibHndl);
 	if (info->connectinfo.state == 0) {
