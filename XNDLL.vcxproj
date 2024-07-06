@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>.\include;$(IncludePath)</IncludePath>
-    <LibraryPath>.\fanucdll;$(LibraryPath)</LibraryPath>
+    <LibraryPath>.\opcuadll;.\fanucdll;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -98,7 +98,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>Fwlib32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Fwlib32.lib;open62541.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -161,21 +161,27 @@
     <ClInclude Include="FanucMachineTool.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="include\Fwlib32.h" />
+    <ClInclude Include="include\open62541.h" />
+    <ClInclude Include="KEDEMachineTool.h" />
     <ClInclude Include="MachineBaseInfo.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="SiemensMachineTool.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="FanucMachineTool.cpp" />
+    <ClCompile Include="KEDEMachineTool.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SiemensMachineTool.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="fanucdll\Fwlib32.lib" />
+    <Library Include="opcuadll\open62541.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -10,21 +10,37 @@ d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(26): warning C4273: �
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(11): note: 参见“Connect”的前一个定义
 d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(42): warning C4273: “FanucMachineTool::Disconnect”: dll 链接不一致
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(12): note: 参见“Disconnect”的前一个定义
-d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(56): warning C4273: “FanucMachineTool::getSpindleLoad”: dll 链接不一致
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(55): warning C4273: “FanucMachineTool::getSpindleLoad”: dll 链接不一致
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(15): note: 参见“getSpindleLoad”的前一个定义
-d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(80): warning C4273: “FanucMachineTool::getSpindleSpeed”: dll 链接不一致
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(79): warning C4273: “FanucMachineTool::getSpindleSpeed”: dll 链接不一致
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(16): note: 参见“getSpindleSpeed”的前一个定义
-d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(94): warning C4273: “FanucMachineTool::getAxisFeed”: dll 链接不一致
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(93): warning C4273: “FanucMachineTool::getAxisFeed”: dll 链接不一致
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(19): note: 参见“getAxisFeed”的前一个定义
-d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(108): warning C4273: “FanucMachineTool::getAxisFeedrate”: dll 链接不一致
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(107): warning C4273: “FanucMachineTool::getAxisFeedrate”: dll 链接不一致
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(20): note: 参见“getAxisFeedrate”的前一个定义
-d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(127): warning C4273: “FanucMachineTool::getPosition”: dll 链接不一致
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(126): warning C4273: “FanucMachineTool::getPosition”: dll 链接不一致
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(21): note: 参见“getPosition”的前一个定义
-d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(145): warning C4273: “FanucMachineTool::getToolNum”: dll 链接不一致
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(144): warning C4273: “FanucMachineTool::getToolNum”: dll 链接不一致
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(24): note: 参见“getToolNum”的前一个定义
-d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(161): warning C4273: “FanucMachineTool::getProgLineNum”: dll 链接不一致
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(160): warning C4273: “FanucMachineTool::getProgLineNum”: dll 链接不一致
   d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.h(27): note: 参见“getProgLineNum”的前一个定义
-d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(185): warning C4715: “FanucMachineTool::getProgLineNum”: 不是所有的控件路径都返回值
+d:\dlut\xn_communication\xndll\xndll\fanucmachinetool.cpp(184): warning C4715: “FanucMachineTool::getProgLineNum”: 不是所有的控件路径都返回值
+  KEDEMachineTool.cpp
+d:\dlut\xn_communication\xndll\xndll\kedemachinetool.cpp(5): warning C4273: “KEDEMachineTool::KEDEMachineTool”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\kedemachinetool.h(6): note: 参见“{ctor}”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\kedemachinetool.cpp(9): warning C4273: “KEDEMachineTool::~KEDEMachineTool”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\kedemachinetool.h(7): note: 参见“{dtor}”的前一个定义
   pch.cpp
+  SiemensMachineTool.cpp
+d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.cpp(9): warning C4273: “SiemensMachineTool::SiemensMachineTool”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.h(8): note: 参见“{ctor}”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.cpp(13): warning C4273: “SiemensMachineTool::~SiemensMachineTool”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.h(9): note: 参见“{dtor}”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.cpp(17): warning C4273: “SiemensMachineTool::setConfig”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.h(10): note: 参见“setConfig”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.cpp(40): warning C4273: “SiemensMachineTool::Connect”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.h(11): note: 参见“Connect”的前一个定义
+d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.cpp(55): warning C4273: “SiemensMachineTool::loadFile”: dll 链接不一致
+  d:\dlut\xn_communication\xndll\xndll\siemensmachinetool.h(14): note: 参见“loadFile”的前一个定义
     正在创建库 D:\DLUT\XN_Communication\XNDLL\Debug\XNDLL.lib 和对象 D:\DLUT\XN_Communication\XNDLL\Debug\XNDLL.exp
   XNDLL.vcxproj -> D:\DLUT\XN_Communication\XNDLL\Debug\XNDLL.dll

@@ -9,17 +9,24 @@
 #define no_init_all deprecated
 #define TYPE_FANUC 0
 #include<string>
+#include"open62541.h"
 
 using namespace std;
 
 struct ConnectInfo  //连接信息
 {
-	int nc_type = 0;            //数控系统种类
-	short state;             //连接状态
-	string ip;
+	int nc_type = 0;        //数控系统种类
+	short state;            //连接状态
+	string ip;				//IP及URL
 	unsigned short port;
 	long timeout = 10;
-	unsigned short FlibHndl;
+	unsigned short FlibHndl;//动态库句柄
+	string password;		//OPCUA用户名
+	string username;		//OPCUA密码
+	UA_Client* ua_client;	//OPCUA客户端
+	string ua_cerder;			//OPCUA证书路径
+	string ua_keyder;			//OPCUA私钥路径
+
 	long mySleep = -1;
 	bool flag = 0;           //读取标志
 };

@@ -30,6 +30,15 @@
     <ClInclude Include="FanucMachineTool.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="KEDEMachineTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SiemensMachineTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\open62541.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -41,9 +50,18 @@
     <ClCompile Include="FanucMachineTool.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="KEDEMachineTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SiemensMachineTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="fanucdll\Fwlib32.lib">
+      <Filter>资源文件</Filter>
+    </Library>
+    <Library Include="opcuadll\open62541.lib">
       <Filter>资源文件</Filter>
     </Library>
   </ItemGroup>
